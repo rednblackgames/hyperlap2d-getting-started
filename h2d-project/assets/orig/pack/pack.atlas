@@ -1,0 +1,55 @@
+
+pack.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+button01
+  rotate: false
+  xy: 155, 223
+  size: 151, 110
+  orig: 151, 110
+  offset: 0, 0
+  index: -1
+button02
+  rotate: false
+  xy: 2, 2
+  size: 151, 164
+  orig: 151, 164
+  offset: 0, 0
+  index: -1
+button03
+  rotate: false
+  xy: 2, 168
+  size: 151, 165
+  orig: 151, 165
+  offset: 0, 0
+  index: -1
+button04
+  rotate: false
+  xy: 3078, 2218
+  size: 151, 165
+  orig: 151, 165
+  offset: 0, 0
+  index: -1
+glow
+  rotate: false
+  xy: 3078, 2174
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+l2ground
+  rotate: false
+  xy: 2, 335
+  size: 1536, 2048
+  orig: 1536, 2048
+  offset: 0, 0
+  index: -1
+l3decorations
+  rotate: false
+  xy: 1540, 335
+  size: 1536, 2048
+  orig: 1536, 2048
+  offset: 0, 0
+  index: -1
