@@ -1,5 +1,9 @@
 # HyperLap2D libGDX - Gtting Started
-HyperLap2D Runtime libGDX Getting Started example
+This example shows a very basic use of HyperLap2D libGDX runtime.
+
+- Loads and render a simple scene.
+- Retrieve an Entity from the scene.
+- Attach simple action from library.
 
 # License
 

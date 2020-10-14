@@ -23,26 +23,37 @@ public class HyperLap2DExample extends ApplicationAdapter {
 
     @Override
     public void create() {
+        //Create a basic camera and a viewport
         mCamera = new OrthographicCamera();
         mViewport = new ExtendViewport(360, 640, 0, 0, mCamera);
+
+        //Initialize HyperLap2D's SceneLoader, all assets will be loaded here
         mSceneLoader = new SceneLoader();
+        //Load the desired scene with custom viewport
         mSceneLoader.loadScene("MainScene", mViewport);
 
-        //Add action from library
+        //Get root Entity and create the main `ItemWrapper` object
         ItemWrapper root = new ItemWrapper(mSceneLoader.getRoot());
 
+        //Retrieve from root a particular entitiy from its unique name
         Entity skull3 = root.getChild("level-3-skull").getEntity();
+
+        //Load ActionData from Actions Library of the project
         ActionData actionData = mSceneLoader.loadActionFromLibrary("test");
+
+        //Attach action to the entity
         Actions.addAction(mSceneLoader.getEngine(),  skull3, actionData);
     }
 
     @Override
     public void render() {
-        mCamera.update();
+        mCamera.update(); //Update camera
 
+        //Clear screen
         Gdx.gl.glClearColor(0.15f, 0.15f, 0.15f, 1.0f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        //Apply ViewPort and update SceneLoader's ECS engine
         mViewport.apply();
         mSceneLoader.getEngine().update(Gdx.graphics.getDeltaTime());
     }
