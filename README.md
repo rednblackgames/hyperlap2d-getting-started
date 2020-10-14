@@ -5,6 +5,8 @@ This example shows a very basic use of HyperLap2D libGDX runtime.
 - Retrieve an Entity from the scene.
 - Attach simple action from library.
 
+libGDX project generated with [gdx-liftoff](https://github.com/tommyettinger/gdx-liftoff)
+
 # License
 
 All graphic assets copyright belong to [craftpix.net](https://craftpix.net/freebies/free-lava-fields-level-map-2d-backgrounds/).
