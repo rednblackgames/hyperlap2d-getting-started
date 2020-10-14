@@ -36,6 +36,13 @@ android {
 		versionCode 1
 		versionName "1.0"
 	}
+	configurations {
+		compile.exclude group: "junit", module: "junit"
+	}
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
 }
 
 repositories {
