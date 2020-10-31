@@ -8,9 +8,6 @@ dependencies {
 	api "com.badlogicgames.ashley:ashley:$ashleyVersion"
 	api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
 
-	//Optional - graph node actions
-	api "com.googlecode.json-simple:json-simple:1.1.1"
-
 	//HyperLap2D Runtime
 	api "games.rednblack.editor:hyperlap2d-runtime-libgdx:$h2dVersion"
 }
