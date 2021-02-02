@@ -1,4 +1,4 @@
-# HyperLap2D libGDX - Gtting Started
+# HyperLap2D libGDX - Getting Started
 This example shows a very basic use of HyperLap2D libGDX runtime.
 
 - Loads and render a simple scene.
