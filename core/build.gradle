@@ -9,5 +9,5 @@ dependencies {
 	api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
 
 	//HyperLap2D Runtime
-	api "games.rednblack.editor:hyperlap2d-runtime-libgdx:$h2dVersion"
+	api "games.rednblack.hyperlap2d:runtime-libgdx:$h2dVersion"
 }
