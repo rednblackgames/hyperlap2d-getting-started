@@ -27,8 +27,10 @@ scalingCount: 1
 scaling0: 1.0
 timelineCount: 1
 timeline0: 0.0
+independent: false
 - Life Offset - 
 active: false
+independent: false
 - X Offset - 
 active: true
 lowMin: 0.0
@@ -73,7 +75,7 @@ scalingCount: 1
 scaling0: 1.0
 timelineCount: 1
 timeline0: 0.0
-- Scale - 
+- X Scale - 
 lowMin: 0.0
 lowMax: 0.0
 highMin: 15.0
@@ -83,6 +85,8 @@ scalingCount: 1
 scaling0: 0.64705884
 timelineCount: 1
 timeline0: 0.0
+- Y Scale - 
+active: false
 - Velocity - 
 active: true
 lowMin: 0.0
@@ -154,5 +158,7 @@ continuous: true
 aligned: false
 additive: true
 behind: false
+premultipliedAlpha: false
+spriteMode: single
 - Image Paths -
 glow.png
