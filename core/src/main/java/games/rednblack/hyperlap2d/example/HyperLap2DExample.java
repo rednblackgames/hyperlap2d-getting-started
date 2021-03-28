@@ -61,7 +61,8 @@ public class HyperLap2DExample extends ApplicationAdapter {
     @Override
     public void resize(int width, int height) {
         mViewport.update(width, height);
-        mSceneLoader.resize(width, height);
+        if (width != 0 && height != 0)
+            mSceneLoader.resize(width, height);
     }
 
     @Override
