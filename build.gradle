@@ -4,7 +4,7 @@ buildscript {
 		mavenCentral()
 		google()
 		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-		jcenter()
+		maven { url "https://plugins.gradle.org/m2/" }
 	}
 	dependencies {
 		classpath "com.android.tools.build:gradle:$androidPluginVersion"
@@ -34,7 +34,7 @@ subprojects {
 		mavenCentral()
 		maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 		maven { url 'https://jitpack.io' }
-		jcenter()
+		maven { url "https://plugins.gradle.org/m2/" }
 	}
 }
 

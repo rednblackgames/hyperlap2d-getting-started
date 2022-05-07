@@ -1,6 +1,5 @@
 package games.rednblack.hyperlap2d.example;
 
-import com.badlogic.ashley.core.Entity;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
@@ -9,6 +8,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import games.rednblack.editor.renderer.SceneConfiguration;
 import games.rednblack.editor.renderer.SceneLoader;
 import games.rednblack.editor.renderer.systems.action.Actions;
 import games.rednblack.editor.renderer.systems.action.data.ActionData;
@@ -28,21 +28,21 @@ public class HyperLap2DExample extends ApplicationAdapter {
         mViewport = new ExtendViewport(360, 640, 0, 0, mCamera);
 
         //Initialize HyperLap2D's SceneLoader, all assets will be loaded here
-        mSceneLoader = new SceneLoader();
+        mSceneLoader = new SceneLoader(new SceneConfiguration());
         //Load the desired scene with custom viewport
         mSceneLoader.loadScene("MainScene", mViewport);
 
         //Get root Entity and create the main `ItemWrapper` object
-        ItemWrapper root = new ItemWrapper(mSceneLoader.getRoot());
+        ItemWrapper root = new ItemWrapper(mSceneLoader.getRoot(), mSceneLoader.getEngine());
 
         //Retrieve from root a particular entitiy from its unique name
-        Entity skull3 = root.getChild("level-3-skull").getEntity();
+        int skull3 = root.getChild("level-3-skull").getEntity();
 
         //Load ActionData from Actions Library of the project
         ActionData actionData = mSceneLoader.loadActionFromLibrary("test");
 
         //Attach action to the entity
-        Actions.addAction(mSceneLoader.getEngine(),  skull3, actionData);
+        Actions.addAction(skull3, actionData, mSceneLoader.getEngine());
     }
 
     @Override
@@ -55,7 +55,7 @@ public class HyperLap2DExample extends ApplicationAdapter {
 
         //Apply ViewPort and update SceneLoader's ECS engine
         mViewport.apply();
-        mSceneLoader.getEngine().update(Gdx.graphics.getDeltaTime());
+        mSceneLoader.getEngine().process();
     }
 
     @Override
